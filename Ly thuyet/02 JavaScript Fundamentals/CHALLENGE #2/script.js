@@ -1,8 +1,8 @@
 function calcTip(bill) {
   if (bill > 50 && bill < 300) {
-    tip = (bill * 15) / 100;
+    return (tip = (bill * 15) / 100);
   } else {
-    tip = (bill * 20) / 100;
+    return (tip = (bill * 20) / 100);
   }
 }
 
