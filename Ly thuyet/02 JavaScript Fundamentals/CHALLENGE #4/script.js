@@ -3,31 +3,25 @@ const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
 const tips = [];
 const totals = [];
 
-function calcTip(bill) {
-  if (bill > 50 && bill < 300) {
-    tip = (bill * 15) / 100;
-  } else {
-    tip = (bill * 20) / 100;
-  }
-}
+const calcTip = function (bill) {
+  return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+};
 
-for (let tipNumber = 0; tipNumber < bills.length; tipNumber++) {
-  tips[tipNumber] = calcTip(bills[tipNumber]);
+for (let i = 0; i < bills.length; i++) {
+  const tip = calcTip(bills[i]);
+  tips.push(tip);
+  totals.push(tip + bills[i]);
 }
-
-for (let totalNumber = 0; totalNumber < bills.length; totalNumber++) {
-  totals[totalNumber] = bills[totalNumber] + tips[totalNumber];
-}
-
-console.log(tips);
-console.lo;
+console.log(bills, tips, totals);
 // BONUS
 
 const arr = [1123, 432, 343, 673, 123];
-function calcAverage(arr) {
+const calcAverage = function (arr) {
   let sum = 0;
   for (let i = 0; i < arr.length; i++) {
     sum = sum + arr[i];
   }
   return sum / (arr.length + 1);
-}
+};
+
+console.log(calcAverage(arr));
