@@ -5,7 +5,7 @@ const score = 20;
 document.querySelector('.number').textContent = secretNumber;
 
 document.querySelector('.check').addEventListener('click', function () {
-  const guess = document.querySelector('.guess').value;
+  const guess = Number(document.querySelector('.guess').value);
   console.log(guess, typeof guess);
 
   // When there is no input
@@ -16,7 +16,7 @@ document.querySelector('.check').addEventListener('click', function () {
   } else if (guess === secretNumber) {
     document.querySelector('.message').textContent = 'Correct Number!';
     document.querySelector('body').style.backgroundColor = '#60b347';
-    document.querySelector('body').style.width = '30rem';
+    document.querySelector('.number').style.width = '30rem';
   } else if (guess > secretNumber) {
     if (score > 1) {
       document.querySelector('.message').textContent = 'Too high!';
