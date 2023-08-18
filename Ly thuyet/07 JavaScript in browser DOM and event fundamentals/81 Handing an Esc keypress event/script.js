@@ -3,7 +3,7 @@
 const modal = document.querySelector('.modal');
 const overlay = document.querySelector('.overlay');
 const bntCloseModal = document.querySelector('.close-modal');
-const bntsOpenModal = document.querySelectorAll('.open-modal');
+const bntsOpenModal = document.querySelectorAll('.show-modal');
 
 const openModal = function () {
   modal.classList.remove('hidden');
