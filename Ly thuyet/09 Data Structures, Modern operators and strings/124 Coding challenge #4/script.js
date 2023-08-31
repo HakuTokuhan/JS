@@ -43,6 +43,6 @@ document.querySelector('button').addEventListener('click', function () {
       second[0],
       second[0].toUpperCase()
     )}`;
+    console.log(`${output.padEnd(20)}${`✅`.repeat(i + 1)}`);
   }
-  console.log(`${output.padEnd(20)}${`✅`.repeat(i + 1)}`);
 });
